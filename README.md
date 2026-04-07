@@ -26,8 +26,13 @@ The site will be available at `https://<username>.github.io/<repo>/` (or your cu
 | 09 | `docs/09-table-without-headers.html` | Data table using only `<td>`, no `<th>` |
 | 10 | `docs/10-nonsemantic-button.html` | Non-interactive element styled as button; vague link |
 | 11 | `docs/11-video-youtube.html` | Real YouTube watch/short/embed URLs; oEmbed API links; iframes without `title` |
+| 12 | `docs/12-document-links.html` | Links to PDF / `.doc` / `.docx` / `.xlsx` fixtures in `docs/fixtures/` (intentionally poor document accessibility) |
 
 The **index** (`docs/index.html`) is meant to be navigable and is not part of the “broken” set.
+
+## Document fixtures
+
+Binary samples under `docs/fixtures/` are small generated files (minimal PDF without tags, Word Open XML without proper headings/metadata, Excel without explicit table/header semantics, legacy Word HTML as `.doc`). Use them only for testing.
 
 ## Local preview
 

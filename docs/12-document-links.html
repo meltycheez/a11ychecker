@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test 12 — Document downloads</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0b57d0; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f5f5f5; }
+    .bad a { color: #888; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Back to index</a></p>
+  <h1>Downloads: PDF, Word, and Excel (intentionally poor accessibility)</h1>
+  <p>These files are tiny generated fixtures: missing tags/metadata, no real heading structure, tables without proper header semantics, and legacy Word HTML. Use them to test document pipelines and accessibility checkers.</p>
+
+  <h2>By format</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Format</th>
+        <th>Files</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PDF</td>
+        <td>
+          <a href="fixtures/fixture-no-a11y.pdf">fixture-no-a11y.pdf</a> —
+          <a href="fixtures/fixture-report-no-tags.pdf">fixture-report-no-tags.pdf</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Word (.docx)</td>
+        <td>
+          <a href="fixtures/fixture-no-a11y.docx">fixture-no-a11y.docx</a> —
+          <a href="fixtures/fixture-notes-no-headings.docx">fixture-notes-no-headings.docx</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Word (.doc)</td>
+        <td>
+          <a href="fixtures/fixture-no-a11y.doc">fixture-no-a11y.doc</a> —
+          <a href="fixtures/fixture-legacy-html.doc">fixture-legacy-html.doc</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Excel (.xlsx)</td>
+        <td>
+          <a href="fixtures/fixture-no-a11y.xlsx">fixture-no-a11y.xlsx</a> —
+          <a href="fixtures/fixture-sheet-no-headers.xlsx">fixture-sheet-no-headers.xlsx</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Flat list (includes vague link text for HTML testing)</h2>
+  <ul>
+    <li><a href="fixtures/fixture-no-a11y.pdf">Annual report (PDF)</a></li>
+    <li><a href="fixtures/fixture-report-no-tags.pdf">Click here</a></li>
+    <li><a href="fixtures/fixture-no-a11y.docx">Word document</a></li>
+    <li><a href="fixtures/fixture-notes-no-headings.docx">Download</a></li>
+    <li><a href="fixtures/fixture-no-a11y.doc">Legacy Word</a></li>
+    <li><a href="fixtures/fixture-legacy-html.doc">file</a></li>
+    <li><a href="fixtures/fixture-no-a11y.xlsx">Spreadsheet</a></li>
+    <li><a href="fixtures/fixture-sheet-no-headers.xlsx">Data</a></li>
+  </ul>
+  <p class="bad"><a href="fixtures/fixture-no-a11y.pdf">Read more</a> (low-contrast link styled for HTML checks only.)</p>
+</body>
+</html>
