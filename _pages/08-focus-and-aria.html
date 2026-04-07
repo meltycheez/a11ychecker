@@ -1,3 +1,9 @@
+---
+layout: null
+title: '08 — Focusable element and ARIA conflicts'
+order: 8
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +17,7 @@
   </style>
 </head>
 <body>
-  <p><a href="index.html">Back to index</a></p>
+  <p><a href="{{ "/" | relative_url }}">Back to index</a></p>
   <h1>ARIA and focus issues</h1>
   <p>The button below is removed from the tab order but still visible (inconsistent for sighted keyboard users).</p>
   <button type="button" tabindex="-1">Removed from tab order</button>

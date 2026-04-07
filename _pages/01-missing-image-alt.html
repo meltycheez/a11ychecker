@@ -1,3 +1,9 @@
+---
+layout: null
+title: '01 — Missing or poor image alternative text'
+order: 1
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +16,7 @@
   </style>
 </head>
 <body>
-  <p><a href="index.html">Back to index</a></p>
+  <p><a href="{{ "/" | relative_url }}">Back to index</a></p>
   <h1>Informative image without alternative text</h1>
   <p>The following image conveys information (a chart) but has no <code>alt</code> attribute.</p>
   <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect fill='%23333' width='120' height='80'/%3E%3Ctext x='60' y='45' fill='white' text-anchor='middle' font-size='12'%3EQ3 Sales%3C/text%3E%3C/svg%3E">

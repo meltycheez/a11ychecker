@@ -1,0 +1,25 @@
+title: Accessibility test fixtures
+description: Static pages with intentional accessibility issues for tooling and manual checks. Each page focuses on one theme.
+
+url: https://meltycheez.github.io
+baseurl: /a11ychecker
+
+plugins:
+  - jekyll-sitemap
+
+collections:
+  pages:
+    output: true
+    permalink: /:name.html
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: null
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

@@ -1,3 +1,9 @@
+---
+layout: null
+title: '06 — Document without <code>lang</code>'
+order: 6
+---
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +16,7 @@
   </style>
 </head>
 <body>
-  <p><a href="index.html">Back to index</a></p>
+  <p><a href="{{ "/" | relative_url }}">Back to index</a></p>
   <h1>Page without <code>lang</code> on <code>&lt;html&gt;</code></h1>
   <p>This document is written in English but the root element does not declare a default language, which can affect pronunciation and translation tools.</p>
 </body>

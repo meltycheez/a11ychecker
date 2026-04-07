@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; line-height: 1.5; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.75rem; }
+    ul { padding-left: 1.25rem; }
+    a { color: #0b57d0; }
+    a:focus { outline: 2px solid #0b57d0; outline-offset: 2px; }
+    .note { color: #444; font-size: 0.95rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </header>
+  <main>
+    <nav aria-label="Test pages">
+      <ul>
+        {% assign items_sorted = site.collections.pages.docs | sort: "order" %}
+        {% for t in items_sorted %}
+        <li><a href="{{ t.url | relative_url }}">{{ t.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {{ content }}
+  </main>
+  <footer class="note">
+    <p>Return to <a href="{{ '/' | relative_url }}">index</a>. These pages are for testing only; do not use as accessibility examples.</p>
+  </footer>
+</body>
+</html>

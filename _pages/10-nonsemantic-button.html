@@ -1,3 +1,9 @@
+---
+layout: null
+title: '10 — Non-semantic clickable control'
+order: 10
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +25,7 @@
   </style>
 </head>
 <body>
-  <p><a href="index.html">Back to index</a></p>
+  <p><a href="{{ "/" | relative_url }}">Back to index</a></p>
   <h1>Custom “button”</h1>
   <p>The control below looks like a button but is a <code>div</code> with no role, no keyboard support, and no name beyond visible text.</p>
   <div class="fake-btn">Submit order</div>

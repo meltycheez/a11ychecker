@@ -1,3 +1,9 @@
+---
+layout: null
+title: '07 — Duplicate <code>id</code> attributes'
+order: 7
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +16,7 @@
   </style>
 </head>
 <body>
-  <p><a href="index.html">Back to index</a></p>
+  <p><a href="{{ "/" | relative_url }}">Back to index</a></p>
   <h1 id="main-heading">Duplicate identifiers</h1>
   <p id="description">First paragraph with id <code>description</code>.</p>
   <p id="description">Second paragraph incorrectly reuses the same id.</p>

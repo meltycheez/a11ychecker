@@ -1,3 +1,9 @@
+---
+layout: null
+title: '02 — Low color contrast'
+order: 2
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +19,7 @@
   </style>
 </head>
 <body>
-  <p><a class="back" href="index.html">Back to index</a></p>
+  <p><a class="back" href="{{ "/" | relative_url }}">Back to index</a></p>
   <h1>Insufficient contrast</h1>
   <p class="fail-small">Small text (12px) with roughly 2.5:1 contrast against the background — fails WCAG AA for normal text.</p>
   <p class="fail-large">Larger text with low contrast that may still fail depending on exact threshold and background.</p>
