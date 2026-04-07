@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test 01 — Image alt text</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0b57d0; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Back to index</a></p>
+  <h1>Informative image without alternative text</h1>
+  <p>The following image conveys information (a chart) but has no <code>alt</code> attribute.</p>
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect fill='%23333' width='120' height='80'/%3E%3Ctext x='60' y='45' fill='white' text-anchor='middle' font-size='12'%3EQ3 Sales%3C/text%3E%3C/svg%3E">
+
+  <p>Decorative divider marked as informative (wrong):</p>
+  <img alt="Quarterly revenue spike chart showing 40 percent growth" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='4'%3E%3Crect fill='%23ccc' width='200' height='4'/%3E%3C/svg%3E">
+</body>
+</html>

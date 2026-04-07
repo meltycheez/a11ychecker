@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test 10 — Custom control</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0b57d0; }
+    .fake-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #333;
+      color: #fff;
+      border-radius: 4px;
+      cursor: default;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Back to index</a></p>
+  <h1>Custom “button”</h1>
+  <p>The control below looks like a button but is a <code>div</code> with no role, no keyboard support, and no name beyond visible text.</p>
+  <div class="fake-btn">Submit order</div>
+  <p>Another anti-pattern: link styled as a button without clear purpose:</p>
+  <a href="#" style="text-decoration: none; background: #0b57d0; color: #fff; padding: 8px 16px; border-radius: 4px;">Here</a>
+</body>
+</html>

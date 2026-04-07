@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test 07 — Duplicate IDs</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0b57d0; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Back to index</a></p>
+  <h1 id="main-heading">Duplicate identifiers</h1>
+  <p id="description">First paragraph with id <code>description</code>.</p>
+  <p id="description">Second paragraph incorrectly reuses the same id.</p>
+  <label for="email">Email</label>
+  <input id="email" type="email" name="email_primary">
+  <label for="email">Backup email</label>
+  <input id="email" type="email" name="email_backup">
+  <p><a href="#description">Link to #description</a> — target is ambiguous when ids are duplicated.</p>
+</body>
+</html>

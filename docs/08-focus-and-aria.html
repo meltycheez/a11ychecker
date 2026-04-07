@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test 08 — Focus and ARIA</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0b57d0; }
+    [tabindex="-1"] { padding: 4px; border: 1px dashed #999; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Back to index</a></p>
+  <h1>ARIA and focus issues</h1>
+  <p>The button below is removed from the tab order but still visible (inconsistent for sighted keyboard users).</p>
+  <button type="button" tabindex="-1">Removed from tab order</button>
+  <p>Focusable control inside a region marked as hidden from accessibility tree (problematic pattern):</p>
+  <div aria-hidden="true">
+    <button type="button">Still focusable with Tab</button>
+  </div>
+  <p>Positive tabindex creates an unnatural tab order:</p>
+  <a href="#" tabindex="5">Tab order 5</a>
+  <a href="#" tabindex="1">Tab order 1</a>
+  <a href="#" tabindex="3">Tab order 3</a>
+</body>
+</html>

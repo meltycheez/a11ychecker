@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test 11 — YouTube and oEmbed</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0b57d0; }
+    .embed { margin: 1rem 0; aspect-ratio: 16 / 9; max-width: 100%; }
+    .embed iframe { width: 100%; height: 100%; border: 0; }
+    code { font-size: 0.9em; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Back to index</a></p>
+  <h1>Video: real YouTube URLs and oEmbed</h1>
+
+  <h2>Real YouTube links (watch and short URL)</h2>
+  <p>These point at the normal YouTube watch experience (same video, two URL shapes).</p>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=jNQXAC9IVRw">https://www.youtube.com/watch?v=jNQXAC9IVRw</a> (“Me at the zoo”)</li>
+    <li><a href="https://youtu.be/jNQXAC9IVRw">https://youtu.be/jNQXAC9IVRw</a> (short link to the same video)</li>
+    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">https://www.youtube.com/watch?v=dQw4w9WgXcQ</a> (second video for variety)</li>
+  </ul>
+
+  <h2>Embedded players (<code>youtube.com/embed</code>)</h2>
+  <p>Real embeds; iframes intentionally omit <code>title</code> (bad for accessibility testing).</p>
+  <div class="embed">
+    <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="embed">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <h2>oEmbed link (API URL for the same YouTube video)</h2>
+  <p>oEmbed consumers request this URL to receive embed metadata (JSON). The target video is passed in the <code>url</code> query parameter (here it is the “Me at the zoo” watch URL).</p>
+  <p>
+    <a href="https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjNQXAC9IVRw&amp;format=json">YouTube oEmbed JSON for “Me at the zoo”</a>
+  </p>
+  <p>Raw endpoint for copy-paste:</p>
+  <p><code>https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjNQXAC9IVRw&amp;format=json</code></p>
+  <p>Second example (different video, <code>maxwidth</code> optional):</p>
+  <p>
+    <a href="https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&amp;format=json&amp;maxwidth=640">YouTube oEmbed JSON (second video)</a>
+  </p>
+</body>
+</html>
