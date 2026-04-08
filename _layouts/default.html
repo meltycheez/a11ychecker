@@ -21,7 +21,7 @@
   <main>
     <nav aria-label="Test pages">
       <ul>
-        {% assign items_sorted = site.collections.pages.docs | sort: "order" %}
+        {% assign items_sorted = site.specimens | sort: "order" %}
         {% for t in items_sorted %}
         <li><a href="{{ t.url | relative_url }}">{{ t.title }}</a></li>
         {% endfor %}

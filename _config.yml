@@ -8,14 +8,14 @@ plugins:
   - jekyll-sitemap
 
 collections:
-  pages:
+  specimens:
     output: true
     permalink: /:name.html
 
 defaults:
   - scope:
       path: ""
-      type: "pages"
+      type: "specimens"
     values:
       layout: null
 
