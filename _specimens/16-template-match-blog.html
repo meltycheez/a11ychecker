@@ -19,11 +19,13 @@ permalink: /blog.html
 </head>
 <body>
   <p><a href="{{ '/' | relative_url }}">Back to index</a></p>
-  <h1>Blog index (template matching)</h1>
-  <p><strong>Published URL:</strong> <code>/blog.html</code> (with site baseurl prefix in deployment).</p>
-  <p>Use with a <strong>pattern</strong> matcher <code>/blog</code> for P0: this page should attach to the wide template when no narrower template applies.</p>
-  <p>Related fixtures: <a href="{{ '/blog/post-1.html' | relative_url }}">/blog/post-1.html</a>, <a href="{{ '/blog/2024/summary.html' | relative_url }}">/blog/2024/summary.html</a>.</p>
-  <p>Intentional issue: image with no <code>alt</code> (smoke for scans).</p>
-  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect fill='%23999' width='40' height='40'/%3E%3C/svg%3E">
+  <div id="container">
+    <h1>Blog index (template matching)</h1>
+    <p><strong>Published URL:</strong> <code>/blog.html</code> (with site baseurl prefix in deployment).</p>
+    <p>Use with a <strong>pattern</strong> matcher <code>/blog</code> for P0: this page should attach to the wide template when no narrower template applies.</p>
+    <p>Related fixtures: <a href="{{ '/blog/post-1.html' | relative_url }}">/blog/post-1.html</a>, <a href="{{ '/blog/2024/summary.html' | relative_url }}">/blog/2024/summary.html</a>.</p>
+    <p>Intentional issue: image with no <code>alt</code> (smoke for scans).</p>
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect fill='%23999' width='40' height='40'/%3E%3C/svg%3E">
+  </div>
 </body>
 </html>

@@ -19,10 +19,12 @@ permalink: /courses.html
 </head>
 <body>
   <p><a href="{{ '/' | relative_url }}">Back to index</a> · <a href="{{ '/courses/list.html' | relative_url }}">Courses list</a></p>
-  <h1>Courses index (template matching)</h1>
-  <p><strong>Published URL:</strong> <code>/courses.html</code></p>
-  <p>For P1: configure one template with <strong>exact</strong> <code>/courses.html</code> (or the URI your crawl stores for this page) and another with <strong>pattern</strong> <code>/courses</code>. This page is the edge case where both can apply; verify which template wins matches product rules.</p>
-  <p>Intentional issue: missing <code>lang</code> on a fragment (use main page lang).</p>
-  <p>Related: <a href="{{ '/courses/list.html' | relative_url }}">/courses/list.html</a> should match only the pattern template if exact is limited to this path.</p>
+  <div id="container">
+    <h1>Courses index (template matching)</h1>
+    <p><strong>Published URL:</strong> <code>/courses.html</code></p>
+    <p>For P1: configure one template with <strong>exact</strong> <code>/courses.html</code> (or the URI your crawl stores for this page) and another with <strong>pattern</strong> <code>/courses</code>. This page is the edge case where both can apply; verify which template wins matches product rules.</p>
+    <p>Intentional issue: missing <code>lang</code> on a fragment (use main page lang).</p>
+    <p>Related: <a href="{{ '/courses/list.html' | relative_url }}">/courses/list.html</a> should match only the pattern template if exact is limited to this path.</p>
+  </div>
 </body>
 </html>

@@ -19,11 +19,13 @@ permalink: /blog/post-1.html
 </head>
 <body>
   <p><a href="{{ '/' | relative_url }}">Back to index</a> · <a href="{{ '/blog.html' | relative_url }}">Blog index</a></p>
-  <h1>Blog post (template matching)</h1>
-  <p><strong>Published URL:</strong> <code>/blog/post-1.html</code></p>
-  <p>For P0: with templates <strong>Wide</strong> <code>pattern /blog</code> and <strong>Narrow</strong> <code>pattern /blog/2024</code>, this URI matches only the wide template (prefix <code>/blog</code>, does not start with <code>/blog/2024</code>).</p>
-  <p>Intentional issue: skipped heading level after <code>h1</code>.</p>
-  <h3>Subsection (skips h2)</h3>
-  <p>Paragraph.</p>
+  <div id="container">
+    <h1>Blog post (template matching)</h1>
+    <p><strong>Published URL:</strong> <code>/blog/post-1.html</code></p>
+    <p>For P0: with templates <strong>Wide</strong> <code>pattern /blog</code> and <strong>Narrow</strong> <code>pattern /blog/2024</code>, this URI matches only the wide template (prefix <code>/blog</code>, does not start with <code>/blog/2024</code>).</p>
+    <p>Intentional issue: skipped heading level after <code>h1</code>.</p>
+    <h3>Subsection (skips h2)</h3>
+    <p>Paragraph.</p>
+  </div>
 </body>
 </html>

@@ -19,10 +19,12 @@ permalink: /courses/list.html
 </head>
 <body>
   <p><a href="{{ '/' | relative_url }}">Back to index</a> · <a href="{{ '/courses.html' | relative_url }}">Courses index</a></p>
-  <h1>Courses list (template matching)</h1>
-  <p><strong>Published URL:</strong> <code>/courses/list.html</code></p>
-  <p>For P1: with an <strong>exact</strong> matcher only on <code>/courses.html</code>, this page should attach to the <strong>pattern</strong> <code>/courses</code> template, not the exact-only template. Use with <code>clear_existing_pages</code> on update to verify detach/re-attach behavior.</p>
-  <p>Intentional issue: empty button text.</p>
-  <button type="button"></button>
+  <div id="container">
+    <h1>Courses list (template matching)</h1>
+    <p><strong>Published URL:</strong> <code>/courses/list.html</code></p>
+    <p>For P1: with an <strong>exact</strong> matcher only on <code>/courses.html</code>, this page should attach to the <strong>pattern</strong> <code>/courses</code> template, not the exact-only template. Use with <code>clear_existing_pages</code> on update to verify detach/re-attach behavior.</p>
+    <p>Intentional issue: empty button text.</p>
+    <button type="button"></button>
+  </div>
 </body>
 </html>
