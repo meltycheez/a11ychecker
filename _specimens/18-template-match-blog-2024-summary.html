@@ -1,0 +1,28 @@
+---
+layout: null
+title: '18 — Template matching: /blog/2024/summary.html (narrow /blog/2024 wins)'
+order: 18
+permalink: /blog/2024/summary.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template match — 2024 summary</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0b57d0; }
+    code { font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <p><a href="{{ '/' | relative_url }}">Back to index</a> · <a href="{{ '/blog.html' | relative_url }}">Blog index</a></p>
+  <h1>2024 summary (template matching)</h1>
+  <p><strong>Published URL:</strong> <code>/blog/2024/summary.html</code></p>
+  <p>For P0: the <strong>most specific</strong> pattern wins — e.g. <code>pattern /blog/2024</code> (longer prefix) over <code>pattern /blog</code>. Crawl and “add existing pages” should attach this page to the narrow template, not the wide one.</p>
+  <p>Intentional issue: link text “click here”.</p>
+  <p><a href="#">click here</a> for more.</p>
+</body>
+</html>

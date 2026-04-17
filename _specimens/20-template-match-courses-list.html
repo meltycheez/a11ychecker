@@ -1,0 +1,28 @@
+---
+layout: null
+title: '20 — Template matching: /courses/list.html (pattern-only sibling)'
+order: 20
+permalink: /courses/list.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template match — courses list</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0b57d0; }
+    code { font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <p><a href="{{ '/' | relative_url }}">Back to index</a> · <a href="{{ '/courses.html' | relative_url }}">Courses index</a></p>
+  <h1>Courses list (template matching)</h1>
+  <p><strong>Published URL:</strong> <code>/courses/list.html</code></p>
+  <p>For P1: with an <strong>exact</strong> matcher only on <code>/courses.html</code>, this page should attach to the <strong>pattern</strong> <code>/courses</code> template, not the exact-only template. Use with <code>clear_existing_pages</code> on update to verify detach/re-attach behavior.</p>
+  <p>Intentional issue: empty button text.</p>
+  <button type="button"></button>
+</body>
+</html>

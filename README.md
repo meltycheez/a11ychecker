@@ -29,7 +29,8 @@ order: 14
 ```
 
 3. Use `href="{{ '/' | relative_url }}"` for “back to index” links.
-4. Commit and push — the **index** and **sitemap** update on the next build (no manual edits).
+4. Optional: set `permalink: /some/path.html` in front matter when the default `/:name.html` URL is not enough (e.g. nested paths for template-matching fixtures).
+5. Commit and push — the **index** and **sitemap** update on the next build (no manual edits).
 
 ## Test pages
 
@@ -48,8 +49,26 @@ order: 14
 | 11 | `_specimens/11-video-youtube.html` | Real YouTube watch/short/embed URLs; oEmbed API links; iframes without `title` |
 | 12 | `_specimens/12-document-links.html` | Links to document fixtures in `fixtures/` |
 | 13 | `_specimens/13-video-oembed.html` | YouTube oEmbed examples and embed HTML |
+| 14 | `_specimens/14-youtube.html` | YouTube embed variations |
+| 15 | `_specimens/15-oembed-test.html` | oEmbed / iframe test links |
+| 16 | `_specimens/16-template-match-blog.html` | **URL fixture:** `/blog.html` — P0 wide `/blog` pattern |
+| 17 | `_specimens/17-template-match-blog-post.html` | **URL fixture:** `/blog/post-1.html` — P0 only wide template |
+| 18 | `_specimens/18-template-match-blog-2024-summary.html` | **URL fixture:** `/blog/2024/summary.html` — P0 narrow `/blog/2024` wins |
+| 19 | `_specimens/19-template-match-courses.html` | **URL fixture:** `/courses.html` — P1 exact vs pattern |
+| 20 | `_specimens/20-template-match-courses-list.html` | **URL fixture:** `/courses/list.html` — P1 pattern-only sibling |
 
 The **index** (`index.html` with layout `default`) is meant to be navigable and is not part of the “broken” set.
+
+### Template matching (Dinolytics / crawl QA)
+
+Specimens **16–20** use explicit `permalink` values so the **built paths** match typical static-site URLs (including `.html`). After deploy or `jekyll build`, crawl these URLs and configure templates as follows to exercise **P0/P1** cases from QA:
+
+| Goal | Example matchers (adjust to match stored URIs in your environment) | Pages to crawl |
+|------|-------------------------------------------------------------------|----------------|
+| **P0** — wide vs narrow prefix | Template A: `pattern` `/blog` · Template B: `pattern` `/blog/2024` | `/blog.html`, `/blog/post-1.html`, `/blog/2024/summary.html` |
+| **P1** — exact vs pattern + clear | Template A: `exact` `/courses.html` · Template B: `pattern` `/courses` | `/courses.html`, `/courses/list.html` |
+
+If your crawler stores paths **without** `.html`, normalize matchers accordingly (or align crawler settings) so `TemplateMatcher` sees the same strings as `website_pages.uri`.
 
 ## Document fixtures
 
